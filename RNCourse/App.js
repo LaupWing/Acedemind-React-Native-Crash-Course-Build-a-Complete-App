@@ -10,7 +10,7 @@ export default function App() {
             />
             <Button title="Add Goal"/>
          </View>
-         <View>
+         <View style={styles.goalsContainer}>
             <Text>List of goals</Text>
          </View>
       </View>
@@ -20,9 +20,11 @@ export default function App() {
 const styles = StyleSheet.create({
    appContainer:{
       padding: 50,
-      paddingHorizontal: 16
+      paddingHorizontal: 16,
+      height: "100%"
    },
    inputContainer: {
+      flex: 1,
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
@@ -36,5 +38,8 @@ const styles = StyleSheet.create({
       width: "70%",
       marginRight: 8,
       padding: 8
+   },
+   goalsContainer: {
+      flex: 3
    }
 })
