@@ -19,16 +19,21 @@ export default function App() {
 
 const styles = StyleSheet.create({
    appContainer:{
-      padding: 50
+      padding: 50,
+      paddingHorizontal: 16
    },
    inputContainer: {
       flexDirection: "row",
-      justifyContent: "center"
+      justifyContent: "center",
+      alignItems: "center",
+      paddingBottom: 24,
+      borderBottomWidth: 1,
+      borderBottomColor: "#cccccc"
    },
    textInput:{
       borderWidth: 1,
       borderColor: "#cccccc",
-      width: "80%",
+      width: "70%",
       marginRight: 8,
       padding: 8
    }
