@@ -3,7 +3,13 @@ import { StyleSheet, Text, View, Button } from "react-native"
 export default function App() {
    return (
       <View style={styles.container}>
-         <Text>Test</Text>
+         <Text
+            style={{
+               margin: 10,
+               borderWidth: 1,
+               borderColor: "red"
+            }}
+         >Test</Text>
          <Button
             title="TAP ME"
          />
