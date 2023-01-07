@@ -5,11 +5,14 @@ export default function App() {
       <View style={styles.container}>
          <Text
             style={{
-               margin: 10,
+               margin: 16,
                borderWidth: 1,
-               borderColor: "red"
+               borderColor: "red",
+               padding: 16
             }}
-         >Test</Text>
+         >
+            Hello World
+         </Text>
          <Button
             title="TAP ME"
          />
@@ -24,4 +27,10 @@ const styles = StyleSheet.create({
       alignItems: "center",
       justifyContent: "center",
    },
+   dummyText: {
+      margin: 16,
+      borderWidth: 1,
+      borderColor: "red",
+      padding: 16
+   }
 })
