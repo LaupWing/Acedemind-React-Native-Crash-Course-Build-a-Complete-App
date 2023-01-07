@@ -10,7 +10,9 @@ export default function App() {
    }
 
    function addGoalHandler() {
-      setGoals([...goals, goal])
+      setGoals((current_goals)=>{
+         return [...current_goals, goal]
+      })
    }
 
    return (
@@ -27,7 +29,9 @@ export default function App() {
             />
          </View>
          <View style={styles.goalsContainer}>
-            <Text>List of goals</Text>
+            {goals.map((goal,i) => (
+               <Text key={i}>{goal}</Text>
+            ))}
          </View>
       </View>
    )
