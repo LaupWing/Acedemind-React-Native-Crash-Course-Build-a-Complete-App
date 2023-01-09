@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { StyleSheet, Text, View, Button, TextInput, FlatList } from "react-native"
+import { StyleSheet, View, Button, TextInput, FlatList } from "react-native"
+import GoalItem from "./components/GoalItem"
 
 export default function App() {
    const [goal, setGoal] = useState()
@@ -35,9 +36,7 @@ export default function App() {
             <FlatList 
                data={goals} 
                renderItem={(goalData) => (
-                  <View style={styles.goalItem}>
-                     <Text style={styles.goalText}>{goalData.item.text}</Text>
-                  </View>
+                  <GoalItem goalData={goalData}/>
                )} 
                keyExtractor={item => item.id}
                alwaysBounceVertical={false}
@@ -71,14 +70,5 @@ const styles = StyleSheet.create({
    },
    goalsContainer: {
       flex: 5
-   },
-   goalItem: {
-      margin: 8,
-      borderRadius: 6,
-      backgroundColor: "#5e0acc",
-      padding: 8,
-   },
-   goalText:{
-      color: "white"
    }
 })
