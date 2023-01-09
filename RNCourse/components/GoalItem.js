@@ -1,11 +1,17 @@
 import React from "react"
-import { StyleSheet, Text, View } from "react-native"
+import { StyleSheet, Text, View, Pressable } from "react-native"
 
-const GoalItem = ({goalData}) => {
+const GoalItem = ({goalData, onDelete}) => {
+   const handlePress = () => {
+      
+   }
+
    return (
-      <View style={styles.goalItem}>
-         <Text style={styles.goalText}>{goalData.item.text}</Text>
-      </View>
+      <Pressable onPress={handlePress}>
+         <View style={styles.goalItem}>
+            <Text style={styles.goalText}>{goalData.item.text}</Text>
+         </View>
+      </Pressable>
    )
 }
 

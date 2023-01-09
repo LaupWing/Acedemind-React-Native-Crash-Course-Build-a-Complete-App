@@ -12,6 +12,7 @@ const GoalInput = ({goalInputHandler}) => {
             placeholder="Test"
             style={styles.textInput}
             onChangeText={goalInputHandler}
+            value={goal}
          />
          <Button 
             title="Add Goal"
