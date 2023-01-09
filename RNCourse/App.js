@@ -1,17 +1,13 @@
 import { useState } from "react"
-import { StyleSheet, View, Button, TextInput, FlatList } from "react-native"
+import { StyleSheet, View, FlatList } from "react-native"
 import GoalInput from "./components/GoalInput"
 import GoalItem from "./components/GoalItem"
 
 export default function App() {
-   const [goal, setGoal] = useState()
    const [goals, setGoals] = useState([])
 
-   function goalInputHandler(enteredText) {
-      setGoal(enteredText)
-   }
 
-   function addGoalHandler() {
+   function addGoalHandler(goal) {
       setGoals((current_goals)=>{
          return [...current_goals, {
             text:goal,

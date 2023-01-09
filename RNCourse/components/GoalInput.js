@@ -1,7 +1,11 @@
 import React from "react"
 import { Button, StyleSheet, TextInput, View } from "react-native"
 
-const GoalInput = ({goalInputHandler, addGoalHandler}) => {
+const GoalInput = ({goalInputHandler}) => {
+   const [goal, setGoal] = useState()
+   function goalInputHandler(enteredText) {
+      setGoal(enteredText)
+   }
    return (
       <View style={styles.inputContainer}>
          <TextInput
@@ -11,7 +15,7 @@ const GoalInput = ({goalInputHandler, addGoalHandler}) => {
          />
          <Button 
             title="Add Goal"
-            onPress={addGoalHandler}
+            onPress={()=> addGoalHandler(goal)}
          />
       </View>
    )
