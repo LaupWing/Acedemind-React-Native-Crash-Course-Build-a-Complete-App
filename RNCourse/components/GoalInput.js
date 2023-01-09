@@ -15,7 +15,10 @@ const GoalInput = ({goalInputHandler}) => {
          />
          <Button 
             title="Add Goal"
-            onPress={()=> addGoalHandler(goal)}
+            onPress={()=> {
+               addGoalHandler(goal)
+               setGoal("")
+         }}
          />
       </View>
    )
