@@ -13,7 +13,7 @@ export default function App() {
       setGoals((current_goals)=>{
          return [...current_goals, {
             text:goal,
-            key: Math.random().toString()
+            id: Math.random().toString()
          }]
       })
    }
@@ -39,6 +39,7 @@ export default function App() {
                      <Text style={styles.goalText}>{goalData.item.text}</Text>
                   </View>
                )} 
+               keyExtractor={item => item.id}
                alwaysBounceVertical={false}
             />
          </View>
