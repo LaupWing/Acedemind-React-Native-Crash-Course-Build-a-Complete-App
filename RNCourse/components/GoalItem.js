@@ -2,12 +2,8 @@ import React from "react"
 import { StyleSheet, Text, View, Pressable } from "react-native"
 
 const GoalItem = ({goalData, onDelete}) => {
-   const handlePress = () => {
-      
-   }
-
    return (
-      <Pressable onPress={handlePress}>
+      <Pressable onPress={onDelete}>
          <View style={styles.goalItem}>
             <Text style={styles.goalText}>{goalData.item.text}</Text>
          </View>

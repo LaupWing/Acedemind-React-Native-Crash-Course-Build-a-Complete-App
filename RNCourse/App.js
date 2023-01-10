@@ -6,7 +6,6 @@ import GoalItem from "./components/GoalItem"
 export default function App() {
    const [goals, setGoals] = useState([])
 
-
    function addGoalHandler(goal) {
       setGoals((current_goals)=>{
          return [...current_goals, {
@@ -16,8 +15,10 @@ export default function App() {
       })
    }
 
-   function deleteGoalHandler() {
-      console.log("DELETE")
+   function deleteGoalHandler(id) {
+      setGoals((current_goals) => {
+         return [...current_goals].filter(x => x.id !== id)
+      })
    }
 
    return (
