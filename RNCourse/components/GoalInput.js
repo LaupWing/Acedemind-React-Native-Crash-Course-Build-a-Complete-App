@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Modal, StyleSheet, TextInput, View } from "react-native"
+import { Button, Image, Modal, StyleSheet, TextInput, View } from "react-native"
 
 const GoalInput = ({goalInputHandler, showModal, addGoalHandler, setShowModal}) => {
    const [goal, setGoal] = useState()
@@ -9,6 +9,10 @@ const GoalInput = ({goalInputHandler, showModal, addGoalHandler, setShowModal}) 
    return (
       <Modal animationType="slide" visible={showModal}>
          <View style={styles.inputContainer}>
+            <Image 
+               source={require("../assets/adaptive-icon.png")}
+               style={styles.image}
+            />
             <TextInput
                placeholder="Test"
                style={styles.textInput}
@@ -23,11 +27,13 @@ const GoalInput = ({goalInputHandler, showModal, addGoalHandler, setShowModal}) 
                         addGoalHandler(goal)
                         setGoal("")
                         setShowModal(false)
-                  }}
-                  />
+                     }}
+                     color="#5e0acc"
+                     />
                </View>
                <View style={styles.button}>
                   <Button 
+                     color="#f31282"
                      title="Cancel"
                      onPress={()=> {
                         setShowModal(false)
@@ -51,11 +57,20 @@ const styles = StyleSheet.create({
       marginBottom: 24,
       borderBottomWidth: 1,
       padding: 16,
-      borderBottomColor: "#cccccc"
+      borderBottomColor: "#cccccc",
+      backgroundColor: "orange"
+   },
+   image:{
+      width: 100,
+      height: 100,
+      margin: 20
    },
    textInput:{
       borderWidth: 1,
-      borderColor: "#cccccc",
+      borderColor: "#e4d0ff",
+      backgroundColor: "e4d0ff",
+      color: "#120438",
+      borderRadius: 6,
       width: "100%",
       padding: 8
    },
